@@ -1,0 +1,220 @@
+
+
+/* IDK */
+body {
+  background-color: rgb(0, 0, 0);
+
+  /* Sets the body to a minimum height of 100% of the viewport */
+  max-height: 20vh;
+}
+
+.borges1 img {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+}
+
+/*fade-in animation for images*/
+@keyframes Fadez  {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*floating animation for images*/
+@keyframes Float {
+0% {
+    transform: rotate(0deg) 
+    translateX(10px) rotate(0deg);
+            }
+100% {
+    transform: rotate(360deg) 
+    translateX(10px) rotate(-360deg);
+}
+}
+
+.image-wrap {
+  position: fixed;
+  display: inline-block;
+  cursor: pointer;
+  animation: Float 8s linear infinite;
+}
+
+.image-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0, 0, 0, 0.767);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-wrap:hover {
+  opacity: 1;
+}
+
+.image-wrap:hover img {
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+}
+
+/* IMAGES */ 
+#anchor {
+  display: none;
+  width: 200px;
+  animation: Fadez 0.7s ease-in-out forwards;
+}
+
+#wrap-anchor { 
+  bottom: 15px; 
+  left: 60px; 
+}
+
+#grayman {
+  animation: Fadez 0.7s ease-in-out forwards;
+  display: none;
+  width: 250px;
+  height: auto;
+}
+
+#wrap-grayman { 
+  top: 20px;
+  left: -10px;
+}
+
+#bed {
+  animation: Fadez 0.7s ease-in-out forwards;
+  display: none;
+  width: 250px;
+  height: auto;
+}
+
+#wrap-bed { 
+  bottom: 30px;
+  right: 550px;
+}
+
+#tree {
+  animation: Fadez 0.7s ease-in-out forwards;
+  display: none;
+  width: 350px;
+  height: auto;
+}
+
+#wrap-tree { 
+  bottom: 70px;
+  left: 170px;
+}
+
+#open-book{
+  animation: Fadez 0.7s ease-in-out forwards;
+  display: none;
+  width: 200px;
+  height: auto;
+}
+
+#wrap-book { 
+  top: 200px;
+  left: 140px;
+}
+
+#sand {
+  animation: Fadez 0.7s ease-in-out forwards;
+  display: none;
+  width: 250px;
+  height: auto;
+}
+
+#wrap-sand { 
+  top: 100px;
+  right: 420px;
+}
+
+#fire {
+  animation: Fadez 0.7s ease-in-out forwards;
+  display: none;
+  width: 450px;
+  height: auto;
+}
+
+#wrap-fire { 
+  top: 300px;
+  right: 710px;
+}
+
+#bird {
+  animation: Fadez 0.7s ease-in-out forwards;
+  display: none;
+  width: 200px;
+  height: auto;
+}
+
+#wrap-bird { 
+  top: -30px;
+  right: 650px;
+}
+
+#wrap-anchor  { animation-duration: 7s; }
+#wrap-grayman { animation-duration: 9s; }
+#wrap-bed     { animation-duration: 6s; }
+#wrap-tree    { animation-duration: 11s; }
+#wrap-book    { animation-duration: 8s; }
+#wrap-sand    { animation-duration: 10s; }
+#wrap-fire    { animation-duration: 13s; }
+#wrap-bird    { animation-duration: 5s; }
+
+/* end of images */
+
+.content {
+color: rgb(255, 255, 255);
+width: 400px;
+position: relative;
+left: 120vh;
+
+font-size: 1.3em;
+letter-spacing: 1.1px;
+text-indent: 2.5em;
+padding-top: 22em;
+padding-bottom: 50em;
+line-height: 1.2em;
+
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: 200;
+font-style: normal;
+
+}
+
+/*LINK STYLE*/
+/* unvisited link */
+a:link {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+/* visited link */
+a:visited {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  background-color: rgb(255, 255, 255);
+  font-weight: 550;
+}
+
+/* selected link */
+a:active {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+

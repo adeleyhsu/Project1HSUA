@@ -1,0 +1,62 @@
+.writing {
+  display: inline-block;
+  width: 300px;
+  font-size: 4vh;
+  left: 500px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: 200;
+font-style: normal;
+  text-indent: 1.4em;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes Fadez {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.image-wrap {
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.image-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-wrap:hover::after {
+  opacity: 1;
+}
+
+.image-wrap:hover img {
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+}
+
+
+
+#anchor {
+  width: 350px; /* adjust to taste */
+  animation: Fadez 0.7s ease-in-out forwards;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+#wrap-anchor {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}

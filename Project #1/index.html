@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<style>
+body{
+    background-color: black;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: 200;
+font-size: medium;
+font-style: normal;
+position: relative;
+}
+
+</style>
+<body>
+
+<div class="sand-text">
+<p>The Book of Sand</p>
+</div>
+
+<div class="ruins-text">
+<p>The Circular Ruins</p>
+</div>
+
+<div class="fork-text">
+<p>The Garden of Forking Paths</p>
+</div>
+
+<a href="bookofsand.html">
+    <div class="image-wrap" id="wrap-sand">
+        <img id="sand-img" src="IMAGES/bookofsandbkg.png" alt="sand">
+    </div>
+</a>
+<a href="circularruins.html">
+    <div class="image-wrap" id="wrap-ruins">
+        <img id="ruins-img" src="IMAGES/circularruinsbkg.png" alt="idk">
+    </div>
+</a>
+<a href="forkingpaths.html">
+    <div class="image-wrap" id="wrap-fork">
+        <img id="fork-img" src="IMAGES/forkingpathsbkg.png" alt="idk">
+    </div>
+</a>
+
+    <div class="borges" onclick="toggleBubble('bubble-sand', event)">
+        <img src="IMAGES/borges.png" alt="borges">
+    </div>
+
+<div class="bubble" id="bubble-sand">
+    <p>Hi! I am Jorge Luis Borges. An Argentine poet, essayist, and short story writer. Here are three short stories I have written.</p>
+</div>
+
+<script>
+function toggleBubble(id, event) {
+  event.preventDefault();
+  const bubble = document.getElementById(id);
+  bubble.classList.toggle('visible');
+}
+</script>
+
+</body>
+</html>

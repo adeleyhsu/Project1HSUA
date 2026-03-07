@@ -1,0 +1,57 @@
+.col-inner {
+  transform: translateY(100vh);
+}
+
+.borges1 img {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+}
+
+/*fade-in animation for images*/
+@keyframes Fadez  {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.image-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0, 0, 0, 0.767);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-wrap:hover {
+  opacity: 1;
+}
+
+.image-wrap:hover img {
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+}
+
+.image {
+  width: 300px;
+  animation: Fadez 0.7s ease-in-out forwards;
+  display: block;
+ margin: 0 auto;
+}
+
+p.image-para {
+  text-indent: 0;
+  text-align: center;
+}
